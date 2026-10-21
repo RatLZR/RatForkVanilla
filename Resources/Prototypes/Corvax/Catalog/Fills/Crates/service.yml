@@ -63,3 +63,18 @@
       - id: ClothingHeadHatWitch1
       - id: ClothingOuterPlagueSuit
       - id: ClothingMaskPlague
+
+- type: entity
+  parent: CrateLivestock
+  id: CrateNPCCapybara
+  name: capybara crate
+  description: A crate containing a three capybaras.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: MobCapybara
+          amount: 2
+        - !type:NestedSelector
+          tableId: SpecialCapybaraTable

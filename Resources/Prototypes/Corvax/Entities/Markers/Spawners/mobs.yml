@@ -10,3 +10,17 @@
     - type: ConditionalSpawner
       prototypes:
         - MobGorillaLargo
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobCapybara
+  name: Capybara Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: capybara
+      sprite: Corvax/Mobs/Pets/capybara.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobCapybara

@@ -49,3 +49,12 @@
         - MobPig
       chance: 1
       offset: 0.0
+
+- type: entityTable
+  id: SpecialCapybaraTable
+  table: !type:GroupSelector
+    children:
+    - id: MobCapybara
+      weight: 0.95
+    - id: MobDellyW
+      weight: 0.05

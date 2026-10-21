@@ -1,0 +1,101 @@
+- type: entity
+  parent: [SimpleMobBase, BaseMobDestructible, BaseSlicingRefinableButchering, BaseExaminableHunger]
+  id: MobCapybara
+  name: capybara
+  description: A guinea pig that has found inner peace. You could learn a thing or two from it!
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Corvax/Mobs/Pets/capybara.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: capybara
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: InteractionPopup
+    interactSuccessString: petting-success-dog
+    interactFailureString: petting-failure-generic
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Corvax/Animals/capybara_pet.ogg
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - Capybara
+    - VimPilot
+  - type: NameIdentifier
+    group: GenericNumber
+  - type: Speech
+    speechSounds: capybara
+  - type: Reproductive
+    minHungerThreshold: Peckish
+    partnerWhitelist:
+      tags:
+      - Capybara
+    offspring:
+    - id: MobCapybara
+  - type: ReproductivePartner
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-primate
+  - type: MobPrice
+    price: 200
+  - type: MessyDrinker
+  - type: Grammar
+    attributes:
+      gender: female # ur a girl, Harry!
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: capybara
+      Critical:
+        Base: capybara_dead
+      Dead:
+        Base: capybara_dead
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodMeat
+      amount: 4
+  - type: HTN
+    rootTask:
+      task: RuminantHostileCompound
+  - type: Pacified # coz capybara is high-social animal
+
+- type: entity
+  parent: MobCapybara
+  id: MobDellyW
+  name: Delly W.
+  description: Prepared to deal with anything! That’s really cool.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Corvax/Mobs/Pets/capybara.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: dellyw
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: dellyw
+      Critical:
+        Base: dellyw_dead
+      Dead:
+        Base: dellyw_dead
+  - type: Grammar
+    attributes:
+      gender: male # dat cool!
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodMeat
+      amount: 4
+    - id: MaterialDiamond1 # gem. dat it
+      amount: 1
+ 
