@@ -235,6 +235,9 @@
 
 - type: Tag
   id: CaptainSabre # Storage whitelist: ClothingBeltSheath. ItemMapper: ClothingBeltSheath
+  
+- type: Tag
+  id: Capybara # Reproductive partner key
 
 - type: Tag
   id: Carp # CargoBounty: BountyCarp

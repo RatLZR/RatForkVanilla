@@ -1,0 +1,8 @@
+- type: speechSounds
+  id: capybara
+  saySound:
+    path: /Audio/Corvax/Animals/capybara_talk2.ogg
+  askSound:
+    path: /Audio/Corvax/Animals/capybara_talk2.ogg
+  exclaimSound:
+    path: /Audio/Corvax/Animals/capybara_talk1.ogg
